@@ -40,14 +40,14 @@ jobs:
         ls dist
         ls dist/app
         mkdir app
-        mv ./dist/app.app ./app/app.app
-        hdiutil create -srcfolder ./app app.dmg
+        mv ./dist/PromptDebugger.app ./app/PromptDebugger.app
+        hdiutil create -srcfolder ./app PromptDebugger.dmg
 
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: app.dmg
-        asset_name: app.dmg
+        file: PromptDebugger.dmg
+        asset_name: PromptDebugger.dmg
         tag: latest-builds
         overwrite: true
         
@@ -63,8 +63,6 @@ jobs:
       run: |
         pip3 install pyinstaller
         pip3 install -r requirements.txt
-        sudo apt install python3-tk python3-pil.imagetk
-
     - name: Build
       run: pyinstaller app.spec
       
@@ -75,8 +73,8 @@ jobs:
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: dist/app
-        asset_name: app
+        file: dist/PromptDebugger
+        asset_name: PromptDebugger
         tag: latest-builds
         overwrite: true
   
@@ -103,7 +101,7 @@ jobs:
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: dist/app.exe
-        asset_name: app.exe
+        file: dist/PromptDebugger.exe
+        asset_name: PromptDebugger.exe
         tag: latest-builds
         overwrite: true
