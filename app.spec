@@ -77,6 +77,6 @@ else:
 app = BUNDLE(
     bundle_type,
     name='app.app',
-    icon=None,
+    icon='logo.png',
     bundle_identifier=None,
 )
