@@ -38,7 +38,7 @@ jobs:
     - name: Log files
       run: |
         ls dist
-        ls dist/app
+        ls dist/PromptDebugger
         mkdir app
         mv ./dist/PromptDebugger.app ./app/PromptDebugger.app
         hdiutil create -srcfolder ./app PromptDebugger.dmg
