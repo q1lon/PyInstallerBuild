@@ -28,7 +28,7 @@ if build_mode == "onedir":
         a.scripts,
         [],
         exclude_binaries=True,
-        name='app',
+        name='prompt_debugger',
         debug=False,
         bootloader_ignore_signals=False,
         strip=False,
@@ -48,7 +48,7 @@ if build_mode == "onedir":
         strip=False,
         upx=True,
         upx_exclude=[],
-        name='app',
+        name='prompt_debugger',
     )
     bundle_type = coll
 else:
@@ -60,7 +60,7 @@ else:
         a.datas,
         [],
         exclude_binaries=False,
-        name='app',
+        name='prompt_debugger',
         debug=False,
         bootloader_ignore_signals=False,
         strip=False,
@@ -76,7 +76,7 @@ else:
 
 app = BUNDLE(
     bundle_type,
-    name='app.app',
+    name='prompt_debugger.app',
     icon='logo.png',
     bundle_identifier=None,
 )
