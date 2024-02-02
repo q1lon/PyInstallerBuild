@@ -32,6 +32,7 @@ jobs:
         python3 --version
         pip3 install --upgrade pip wheel
         pip3 install pyinstaller
+        pip3 install -r requirements.txt
         pyinstaller app.spec
       
     - name: Log files
@@ -61,6 +62,7 @@ jobs:
     - name: Install requirements
       run: |
         pip3 install pyinstaller
+        pip3 install -r requirements.txt
         sudo apt install python3-tk python3-pil.imagetk
 
     - name: Build
@@ -91,6 +93,7 @@ jobs:
         python3 --version
         pip install --upgrade pip wheel
         pip install pyinstaller
+        pip install -r requirements.txt
         pyinstaller app.spec
       
     - name: Log files
