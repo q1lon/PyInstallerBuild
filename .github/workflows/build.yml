@@ -6,7 +6,7 @@ jobs:
   build-mac:
     runs-on: macos-latest
     env:
-      PYTHONVERSION: "3.11.1"
+      PYTHONVERSION: "3.11.7"
       MACOSX_DEPLOYMENT_TARGET: "14.3"
       PYI_BUILD_MODE: "onedir"
 
