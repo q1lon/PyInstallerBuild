@@ -1,15 +1,18 @@
-from tkinter import Tk, Label
+import os
+# 导入布局文件
+from ui import Win as MainWin
+# 导入窗口控制器
+from control import Controller as MainUIController
 
-class ExampleApp(Tk):
-    def __init__(self):
-        super().__init__()
-        self.title("Example")
-        self.label = Label(self, text="Hello World", font=("Courier New bold", 15))
-        self.label.pack()
+# os.environ['TK_SILENCE_DEPRECATION'] = '1'
+# 将窗口控制器 传递给UI
+app = MainWin(MainUIController())
 
-def create_application():
-    app = ExampleApp()
+if __name__ == "__main__":
+    # import platform
+    # arch = platform.machine()
+    # print(f"当前系统架构为：{arch}")
+
+    # 启动
     app.mainloop()
 
-if __name__ == '__main__':
-    create_application()
